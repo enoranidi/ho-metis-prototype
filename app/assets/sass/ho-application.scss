@@ -11,3 +11,17 @@ $govuk-font-family: inherit;
 @import "home-office/all";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+#global-header-bar {
+    background-color: #7f3f98;
+    height: 5px;
+}
+
+.app-contents-list {
+    background: none;
+    box-shadow: none;
+}
+
+.app-related-items {
+    border-top: 2px solid #7f3f98;
+}
