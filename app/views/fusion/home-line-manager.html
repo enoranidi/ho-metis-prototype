@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+    Metis - Home Office
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-l">Account home</span>
+        <h1 class="govuk-heading-l">Anthony Smith</h1>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <div class="govuk-tabs" data-module="govuk-tabs">
+            <h2 class="govuk-tabs__title">Contents</h2>
+            <ul class="govuk-tabs__list">
+                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                    <a class="govuk-tabs__tab" href="#me">Me</a>
+                </li>
+                <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="#my-team">My team</a>
+                </li>
+            </ul>
+            <div class="govuk-tabs__panel" id="me">
+                <h2 class="govuk-heading-l">Me</h2>
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-half">
+                        <div class="landing-card govuk-!-margin-bottom-6">
+                            <h3 class="govuk-heading-m"><a href="leave/leave-type" class="govuk-link">Request leave</a></h3>
+                            <p>Other leave tasks:</p>
+                            <ul class="govuk-list govuk-!-margin-bottom-0">
+                                <li><a href="#" class="govuk-link">Check your leave balance</a></li>
+                                <li><a href="#" class="govuk-link">Change or cancel your leave</a></li>
+                                <li><a href="#" class="govuk-link">Review your team's leave requests</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="govuk-grid-column-one-half">
+                        <div class="landing-card govuk-!-margin-bottom-6">
+                            <h3 class="govuk-heading-m"><a href="#" class="govuk-link">Check your pay</a></h3>
+                            <p>Other pay tasks:</p>
+                            <ul class="govuk-list govuk-!-margin-bottom-0">
+                                <li><a href="#" class="govuk-link">Claim overtime</a></li>
+                                <li><a href="#" class="govuk-link">Claim expenses</a></li>
+                                <li><a href="#" class="govuk-link">Find out how your pay could change</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-half">
+                        <div class="landing-card govuk-!-margin-bottom-0">
+                            <h3 class="govuk-heading-m"><a href="#" class="govuk-link">Get help with HR, finance and Metis issues</a></h3>
+                            <p>Other ways to get help:</p>
+                            <ul class="govuk-list govuk-!-margin-bottom-0">
+                                <li><a href="#" class="govuk-link">Report IT issues (ITNow)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="my-team">
+                <h2 class="govuk-heading-l">My team</h2>
+                <p class="govuk-body">TBC</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
