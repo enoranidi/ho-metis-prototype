@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-   Request Leave - Metis - Home Office
+    Annual leave details - Metis - Home Office
 {% endblock %}
 {% block header %}
 <header class="hods-header" role="banner" data-module="hods-header">
@@ -74,20 +74,41 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Time and absence</h1>
-    </div>
-</div>
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        <div class="govuk-!-margin-bottom-6">
-            <p>Landing page - Content to be confirmed.</p>
-            <ul class="govuk-list">
-                <li><a href="leave-type" class="govuk-link">Book leave</a></li>
-                <li><a href="#" class="govuk-link">Link to common task</a></li>
-                <li><a href="#" class="govuk-link">Link to common task</a></li>
-                <li><a href="#" class="govuk-link">Link to common task</a></li>
-            </ul>
-        </div>
+        <h1 class="govuk-heading-l">Annual leave details (TBC)</h1>
+        <form action="check-answers" method="post">
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--m" for="start-date">Start date</label>
+                <input class="govuk-input govuk-input--width-10" id="start-date" name="start-date" type="text">
+            </div>
+            <div class="govuk-form-group">
+                <label class="govuk-label govuk-label--m" for="end-date">End date</label>
+                <input class="govuk-input govuk-input--width-10" id="end-date" name="end-date" type="text">
+            </div>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Duration</legend>
+                    <div class="govuk-radios" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="duration" name="duration" type="radio" value="all-day" data-aria-controls="conditional-duration">
+                            <label class="govuk-label govuk-radios__label" for="duration">All day (7.4 hours)</label>
+                        </div>
+                        <div class="govuk-radios__divider">or</div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="duration-2" name="duration" type="radio" value="number-hours" data-aria-controls="conditional-duration-2">
+                            <label class="govuk-label govuk-radios__label" for="duration-2">Number of hours</label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-duration-2">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label" for="duration-by-amount">Amount</label>
+                                <div id="amount-hint" class="govuk-hint">For example, 7.4</div>
+                                <input class="govuk-input govuk-input--width-4" id="duration-by-amount" name="duration-by-amount" type="text" aria-describedby="amount-hint">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form>
     </div>
 </div>
 {% endblock %}

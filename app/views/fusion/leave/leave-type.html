@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-    Time and absence - Metis - Home Office
+    What type of leave are you requesting? - Metis - Home Office
 {% endblock %}
 {% block header %}
 <header class="hods-header" role="banner" data-module="hods-header">
@@ -52,7 +52,7 @@
         <div class="govuk-phase-banner">
             <p class="govuk-phase-banner__content">
                 <strong class="govuk-tag govuk-phase-banner__content__tag">alpha</strong>
-                <span class="govuk-phase-banner__text">This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.</span>
+                <span class="govuk-phase-banner__text">This is a new service &ndash; your <a class="govuk-link" href="#">feedback</a> will help us to improve it.</span>
             </p>
         </div>
         <nav class="hods-header__navigation">
@@ -74,57 +74,57 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form action="leave-details" method="post"e>
+        <form action="annual-leave-details" method="post">
             <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <h1 class="govuk-fieldset__heading">Leave type (TBC)</h1>
+                        <h1 class="govuk-fieldset__heading">What type of leave are you requesting?</h1>
                 </legend>
                 <div class="govuk-radios" data-module="govuk-radios">
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="leave-type" name="leave-type" type="radio" value="adoption-leave">
-                            <label class="govuk-label govuk-radios__label" for="leave-type">Adoption Leave</label>
+                            <label class="govuk-label govuk-radios__label" for="leave-type">Adoption leave</label>
                         </div>
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="leave-type-2" name="leave-type" type="radio" value="adoption-support">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-2">Adoption Support</label>
+                            <label class="govuk-label govuk-radios__label" for="leave-type-2">Adoption support</label>
                         </div>
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="leave-type-3" name="leave-type" type="radio" value="annual-leave">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-3">Annual Leave</label>
+                            <label class="govuk-label govuk-radios__label" for="leave-type-3">Annual leave</label>
                         </div>
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="leave-type-4" name="leave-type" type="radio" value="annual-leave-banked">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-4">Annual Leave - Banked</label>
+                            <label class="govuk-label govuk-radios__label" for="leave-type-4">Annual leave - banked</label>
                         </div>
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="leave-type-5" name="leave-type" type="radio" value="maternity-leave">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-5">Maternity Leave</label>
+                            <label class="govuk-label govuk-radios__label" for="leave-type-5">Maternity leave</label>
                         </div>
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="leave-type-6" name="leave-type" type="radio" value="maternity-support">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-6">Maternity Support</label>
+                            <label class="govuk-label govuk-radios__label" for="leave-type-6">Maternity support</label>
                         </div>
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="leave-type-7" name="leave-type" type="radio" value="public-privilege-leave">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-7">Public and Privilege Leave</label>
+                            <label class="govuk-label govuk-radios__label" for="leave-type-7">Public and privilege leave</label>
                         </div>
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="leave-type-8" name="leave-type" type="radio" value="special-paid-leave">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-8">Special Paid Leave</label>
+                            <label class="govuk-label govuk-radios__label" for="leave-type-8">Special paid leave</label>
                         </div>
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="leave-type-9" name="leave-type" type="radio" value="special-unpaid-leave">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-9">Special Unpaid Leave</label>
+                            <label class="govuk-label govuk-radios__label" for="leave-type-9">Special unpaid leave</label>
                         </div>
                         <div class="govuk-radios__item">
                             <input class="govuk-radios__input" id="leave-type-10" name="leave-type" type="radio" value="special-unpaid-leave-reckonable">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-10">Special Unpaid Leave - Reckonable</label>
+                            <label class="govuk-label govuk-radios__label" for="leave-type-10">Special unpaid leave - reckonable</label>
                         </div>
                     </div>
                 </fieldset>
             </div>
-            <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
         </form>
     </div>
 </div>

@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-   Request Leave - Metis - Home Office
+    Check and submit your leave request - Metis - Home Office
 {% endblock %}
 {% block header %}
 <header class="hods-header" role="banner" data-module="hods-header">
@@ -73,21 +73,49 @@
 {% endblock %}
 {% block content %}
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Time and absence</h1>
-    </div>
-</div>
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        <div class="govuk-!-margin-bottom-6">
-            <p>Landing page - Content to be confirmed.</p>
-            <ul class="govuk-list">
-                <li><a href="leave-type" class="govuk-link">Book leave</a></li>
-                <li><a href="#" class="govuk-link">Link to common task</a></li>
-                <li><a href="#" class="govuk-link">Link to common task</a></li>
-                <li><a href="#" class="govuk-link">Link to common task</a></li>
-            </ul>
-        </div>
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+        <h1 class="govuk-heading-l">Check and submit your leave request</h1>
+        <!-- <h2 class="govuk-heading-m">Personal details</h2> -->
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Leave type</dt>
+                <dd class="govuk-summary-list__value">Annual</dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change <span class="govuk-visually-hidden">leave type</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Start date</dt>
+                <dd class="govuk-summary-list__value">2 August 2022</dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change <span class="govuk-visually-hidden">start date</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">End date</dt>
+                <dd class="govuk-summary-list__value">7 August 2022</dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change <span class="govuk-visually-hidden">end date</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">Duration</dt>
+                <dd class="govuk-summary-list__value">14.8 hours (2 days)</dd>
+                <dd class="govuk-summary-list__actions">
+                    <a class="govuk-link" href="#">Change <span class="govuk-visually-hidden">duration</span>
+                    </a>
+                </dd>
+            </div>
+        </dl>
+        <!-- <h2 class="govuk-heading-m">Now send your application</h2>
+        <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p> -->
+        <form action="confirmation" method="post">
+            <input type="hidden" name="answers-checked" value="true">
+            <button class="govuk-button" data-module="govuk-button">Submit</button>
+        </form>  
     </div>
 </div>
 {% endblock %}
