@@ -2,6 +2,12 @@
 {% block pageTitle %}
     What type of leave are you requesting? - Metis - Home Office
 {% endblock %}
+{% block beforeContent %}
+{{ govukBackLink({
+    href: "javascript:window.history.back()",
+    text: "Back"
+}) }}
+{% endblock %}
 {% block header %}
 <header class="hods-header" role="banner" data-module="hods-header">
     <div class="hods-header__container hods-width-container">

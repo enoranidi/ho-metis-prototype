@@ -1,4 +1,10 @@
 {% extends "layout.html" %}
+{% block beforeContent %}
+{{ govukBackLink({
+    href: "javascript:window.history.back()",
+    text: "Back"
+}) }}
+{% endblock %}
 {% block pageTitle %}
     Time and absence - Metis - Home Office
 {% endblock %}

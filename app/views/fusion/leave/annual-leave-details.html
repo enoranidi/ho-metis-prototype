@@ -1,4 +1,10 @@
 {% extends "layout.html" %}
+{% block beforeContent %}
+{{ govukBackLink({
+    href: "javascript:window.history.back()",
+    text: "Back"
+}) }}
+{% endblock %}
 {% block pageTitle %}
     Annual leave details - Metis - Home Office
 {% endblock %}
