@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
-{% block pageTitle %}
-    What type of leave are you requesting? - Metis - Home Office
-{% endblock %}
 {% block beforeContent %}
 {{ govukBackLink({
     href: "javascript:window.history.back()",
     text: "Back"
 }) }}
+{% endblock %}
+{% block pageTitle %}
+    Select full days or half days - Metis - Home Office
 {% endblock %}
 {% block header %}
 <header class="hods-header" role="banner" data-module="hods-header">
@@ -83,64 +83,90 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <form action="annual-leave-dates" method="post">
-            <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                        <h1 class="govuk-fieldset__heading">What type of leave are you requesting?</h1>
-                </legend>
-                <div class="govuk-radios" data-module="govuk-radios">
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="leave-type-3" name="leave-type" type="radio" value="Annual">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-3">Annual</label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="leave-type-4" name="leave-type" type="radio" value="Annual - banked">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-4">Annual - banked</label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="leave-type-7" name="leave-type" type="radio" value="Public and privilege">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-7">Public and privilege</label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="leave-type-8" name="leave-type" type="radio" value="Special - paid">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-8">Special - paid</label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="leave-type-9" name="leave-type" type="radio" value="Special - unpaid">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-9">Special - unpaid</label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="leave-type-10" name="leave-type" type="radio" value="Special - unpaid reckonable">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-10">Special - unpaid reckonable</label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="leave-type-5" name="leave-type" type="radio" value="Maternity">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-5">Maternity</label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="leave-type-6" name="leave-type" type="radio" value="Maternity support">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-6">Maternity support</label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="leave-type" name="leave-type" type="radio" value="Adoption">
-                            <label class="govuk-label govuk-radios__label" for="leave-type">Adoption</label>
-                        </div>
-                        <div class="govuk-radios__item">
-                            <input class="govuk-radios__input" id="leave-type-2" name="leave-type" type="radio" value="Adoption support">
-                            <label class="govuk-label govuk-radios__label" for="leave-type-2">Adoption support</label>
-                        </div>
-                    </div>
-                </fieldset>
-            </div>
+        <!-- <div class="govuk-inset-text">
+            <p class="govuk-body">You have selected 1 to 5 August 2022.</p>
+        </div> -->
+        <h1 class="govuk-heading-l">Select full days or half days</h1>
+        <form action="check-answers" method="post">
+            <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Mon 1 Aug 2022</dt>
+                    <dd class="govuk-summary-list__value">
+                        <div class="govuk-radios govuk-radios--small govuk-radios--inline" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="day-type" name="day-type" type="radio" value="Full day">
+                                <label class="govuk-label govuk-radios__label" for="day-type">Full day</label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="day-type-2" name="day-type" type="radio" value="Half day">
+                                <label class="govuk-label govuk-radios__label" for="day-type-2">Half day</label>
+                            </div>
+                          </div>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Tue 2 Aug 2022</dt>
+                    <dd class="govuk-summary-list__value">
+                        <div class="govuk-radios govuk-radios--small govuk-radios--inline" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="day-type-3" name="day-type" type="radio" value="Full day">
+                                <label class="govuk-label govuk-radios__label" for="day-type-3">Full day</label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="day-type-4" name="day-type" type="radio" value="Half day">
+                                <label class="govuk-label govuk-radios__label" for="day-type-4">Half day</label>
+                            </div>
+                          </div>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Wed 3 Aug 2022</dt>
+                    <dd class="govuk-summary-list__value">
+                        <div class="govuk-radios govuk-radios--small govuk-radios--inline" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="day-type-5" name="day-type" type="radio" value="Full day">
+                                <label class="govuk-label govuk-radios__label" for="day-type-5">Full day</label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="day-type-6" name="day-type" type="radio" value="Half day">
+                                <label class="govuk-label govuk-radios__label" for="day-type-6">Half day</label>
+                            </div>
+                          </div>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Thu 4 Aug 2022</dt>
+                    <dd class="govuk-summary-list__value">
+                        <div class="govuk-radios govuk-radios--small govuk-radios--inline" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="day-type-7" name="day-type" type="radio" value="Full day">
+                                <label class="govuk-label govuk-radios__label" for="day-type-7">Full day</label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="day-type-8" name="day-type" type="radio" value="Half day">
+                                <label class="govuk-label govuk-radios__label" for="day-type-8">Half day</label>
+                            </div>
+                          </div>
+                    </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">Fri 5 Aug 2022</dt>
+                    <dd class="govuk-summary-list__value">
+                        <div class="govuk-radios govuk-radios--small govuk-radios--inline" data-module="govuk-radios">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="day-type-9" name="day-type" type="radio" value="Full day">
+                                <label class="govuk-label govuk-radios__label" for="day-type-9">Full day</label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="day-type-10" name="day-type" type="radio" value="Half day">
+                                <label class="govuk-label govuk-radios__label" for="day-type-10">Half day</label>
+                            </div>
+                          </div>
+                    </dd>
+                </div>
+              </dl>
             <button class="govuk-button" data-module="govuk-button">Continue</button>
         </form>
-        <details class="govuk-details" data-module="govuk-details">
-            <summary class="govuk-details__summary">
-              <span class="govuk-details__summary-text">Help with leave type</span>
-            </summary>
-            <div class="govuk-details__text">TBC</div>
-        </details>
     </div>
 </div>
 {% endblock %}
