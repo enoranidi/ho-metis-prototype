@@ -87,13 +87,13 @@
         <form action="check-answers" method="post">
             <div class="govuk-form-group">
                 <label class="govuk-label govuk-label--m" for="start-date">Start date</label>
-                <input class="govuk-input govuk-input--width-10" id="start-date" name="start-date" type="date">
+                <input class="govuk-input govuk-input--width-10" id="start-date" name="start-date" value="{{ data['start-date'] }}" type="date">
             </div>
             <div class="govuk-form-group">
                 <label class="govuk-label govuk-label--m" for="end-date">End date</label>
-                <input class="govuk-input govuk-input--width-10" id="end-date" name="end-date" type="date">
+                <input class="govuk-input govuk-input--width-10" id="end-date" name="end-date" value="{{ data['end-date'] }}" type="date">
             </div>
-            <div class="govuk-form-group">
+            <!-- <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">Duration</legend>
                     <div class="govuk-radios" data-module="govuk-radios">
@@ -115,7 +115,7 @@
                         </div>
                     </div>
                 </fieldset>
-            </div>
+            </div> -->
             <button class="govuk-button" data-module="govuk-button">Continue</button>
         </form>
     </div>

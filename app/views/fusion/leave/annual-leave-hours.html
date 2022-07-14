@@ -6,7 +6,7 @@
 }) }}
 {% endblock %}
 {% block pageTitle %}
-    Check and submit your leave request - Metis - Home Office
+    Select days or half days - Metis - Home Office
 {% endblock %}
 {% block header %}
 <header class="hods-header" role="banner" data-module="hods-header">
@@ -82,61 +82,85 @@
 {% endblock %}
 {% block content %}
 <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
-        <h1 class="govuk-heading-l">Check and submit your leave request</h1>
-        <!-- <h2 class="govuk-heading-m">Personal details</h2> -->
-        <dl class="govuk-summary-list">
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Leave type</dt>
-                {% if data['leave-type'] %}
-                <dd class="govuk-summary-list__value">{{ data['leave-type'] }}</dd>
-                {% else %}
-                <dd class="govuk-summary-list__value">Annual</dd>
-                {% endif %}
-                <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="leave-type">Change <span class="govuk-visually-hidden">leave type</span>
-                    </a>
-                </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Start date</dt>
-                {% if data['start-date'] %}
-                <dd class="govuk-summary-list__value">{{ data['start-date'] | govukDate }}</dd>
-                {% else %}
-                <dd class="govuk-summary-list__value">1 August 2022</dd> 
-                {% endif %}
-                <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">Change <span class="govuk-visually-hidden">start date</span>
-                    </a>
-                </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">End date</dt>
-                {% if data['end-date'] %}
-                <dd class="govuk-summary-list__value">{{ data['end-date'] | govukDate }}</dd>
-                {% else %}
-                <dd class="govuk-summary-list__value">5 August 2022</dd>
-                {% endif %}
-                <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">Change <span class="govuk-visually-hidden">end date</span>
-                    </a>
-                </dd>
-            </div>
-            <div class="govuk-summary-list__row">
-                <dt class="govuk-summary-list__key">Total leave</dt>
-                <dd class="govuk-summary-list__value">14.8 hours (2 days)</dd>
-                <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">Change <span class="govuk-visually-hidden">total leave</span>
-                    </a>
-                </dd>
-            </div>
-        </dl>
-        <!-- <h2 class="govuk-heading-m">Now send your application</h2>
-        <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the details you are providing are correct.</p> -->
-        <form action="confirmation" method="post">
-            <input type="hidden" name="answers-checked" value="true">
-            <button class="govuk-button" data-module="govuk-button">Submit</button>
-        </form>  
+    <div class="govuk-grid-column-two-thirds">
+        <!-- <div class="govuk-inset-text">
+            <p class="govuk-body">You have selected 1 to 5 August 2022.</p>
+        </div> -->
+        <!-- <h1 class="govuk-heading-l">Select days or half days</h1> -->
+        <form action="check-answers" method="post">
+            <table class="govuk-table">
+                <caption class="govuk-table__caption govuk-table__caption--l">Select days or half days</caption>
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Day</th>
+                        <th scope="col" class="govuk-table__header">Amount</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Monday 1 August 2022</td>
+                        <td class="govuk-table__cell">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label hidden" for="select">Select</label>
+                                <select class="govuk-select" id="select" name="select">
+                                    <option value="all-day">All day</option>
+                                    <option value="half-day">Half day</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Tuesday 2 August 2022</td>
+                        <td class="govuk-table__cell">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label hidden" for="select">Select</label>
+                                <select class="govuk-select" id="select" name="select">
+                                    <option value="all-day">All day</option>
+                                    <option value="half-day">Half day</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Wednesday 3 August 2022</td>
+                        <td class="govuk-table__cell">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label hidden" for="select">Select</label>
+                                <select class="govuk-select" id="select" name="select">
+                                    <option value="all-day">All day</option>
+                                    <option value="half-day">Half day</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Thursday 4 August 2022</td>
+                        <td class="govuk-table__cell">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label hidden" for="select">Select</label>
+                                <select class="govuk-select" id="select" name="select">
+                                    <option value="all-day">All day</option>
+                                    <option value="half-day">Half day</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">Friday 5 August 2022</td>
+                        <td class="govuk-table__cell">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label hidden" for="select">Select</label>
+                                <select class="govuk-select" id="select" name="select">
+                                    <option value="all-day">All day</option>
+                                    <option value="half-day">Half day</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+        </form>
     </div>
 </div>
 {% endblock %}
