@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-    Leave - Guidance and requests - Home Office 
+    Annual leave - Guidance and requests - Home Office 
 {% endblock %}
 {% block header %}
 <header class="hods-header" role="banner" data-module="hods-header">
@@ -77,17 +77,32 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Leave</h1>
+        <h1 class="govuk-heading-xl">Annual leave</h1>
         <aside class="app-mainstream-guide-contents-list" role="complementary">
             <nav class="app-contents-list" aria-label="Pages in this guide" role="navigation">
                 <h2 class="app-contents-list__title">Contents</h2>
                 <ol class="app-contents-list__list">
-                    <li class="app-contents-list__list-item app-contents-list__list-item--dashed app-contents-list__list-item--active">
-                        <a href="#">Page 1</a>
-                    </li>
-                    <li aria-current="true" class="app-contents-list__list-item app-contents-list__list-item--dashed">Page 2</li>
+                    <li class="app-contents-list__list-item  app-contents-list__list-item--dashed">Annual leave</li>
                     <li class="app-contents-list__list-item app-contents-list__list-item--dashed">
-                        <a href="#">Page 3</a>
+                        <a href="#">Bank holidays and privilege day</a>
+                    </li>
+                    <li class="app-contents-list__list-item app-contents-list__list-item--dashed">
+                        <a href="#">Carry over annual leave</a>
+                    </li>
+                    <li class="app-contents-list__list-item app-contents-list__list-item--dashed">
+                        <a href="#">Banking annual leave</a>
+                    </li>
+                    <li class="app-contents-list__list-item app-contents-list__list-item--dashed">
+                        <a href="#">Maternity and annual leave</a>
+                    </li>
+                    <li class="app-contents-list__list-item app-contents-list__list-item--dashed">
+                        <a href="#">Sickness and annual leave</a>
+                    </li>
+                    <li class="app-contents-list__list-item app-contents-list__list-item--dashed">
+                        <a href="#">Leaving the Home Office</a>
+                    </li>
+                    <li class="app-contents-list__list-item app-contents-list__list-item--dashed">
+                        <a href="#">Annual leave: manager actions and responsibilities</a>
                     </li>
                 </ol>
             </nav>
@@ -96,11 +111,74 @@
 </div>
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds app-mainstream-guide-body">
-        <h2 class="govuk-heading-m">Page content heading</h2>
-        <p>Content goes here.</p>
+        <h2 class="govuk-heading-m">The leave year</h2>
+        <p>For all Home Office and HM Passport Office employees, the annual leave year is from 1 March to the last day February.</p>
+        <!-- <div class="govuk-inset-text">
+            <p>from 1 March to the last day February</p>
+        </div> -->
+        <h2 class="govuk-heading-m">Your leave allowance</h2>
+        <p>How much annual leave you get depends on:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>your civil service grade and terms and conditions</li>
+            <li>if you're part time, how many hours you work</li>
+            <li>your length of service</li>
+        </ul>
+        <p>Read the <a href="https://ehdg.cx.ukg.oraclecloud.com/app/answers/detail/a_id/3658" class="govuk-link">Annual Leave Policy</a> (DOCX, 80KB) for full details.</p>
+        <p>Below Senior Civil Service (SCS) grade and on <strong>modernised terms and conditions:</strong></p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>185 hours (25 days) a year when you join</li>
+            <li>222 hours (30 days) a year after 10 years or 6 years for some HM Passport Office employees</li>
+        </ul>
+        <p>Below Senior Civil Service (SCS) grade and on <strong>pre-modernised terms and conditions:</strong></p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>London 190.8 hours; National 196.1 hours (26.5 days) a year when you join</li>
+            <li>London 226.8 hours; National 233.1 hours (31.5 days) a year after 10 years or 6 years for some HM Passport Office employees</li>
+        </ul>
+        <p>Senior Civil Service (SCS) grade:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Read about your leave allowance in the <a href="#" class="govuk-link">Annual Leave Policy</a></li>
+        </ul>
+        <p>Metis automatically calculates an increase to your annual leave because of your civil service anniversary.</p>
+        <h2 class="govuk-heading-m">Check your leave balance</h2>
+        <p>To know how much leave you have for the rest of the leave year, <a href="https://ehdg.cx.ukg.oraclecloud.com/app/answers/detail/a_id/4977" class="govuk-link">check your annual leave balance</a> or navigate to your annual leave calendar:</p>
+        <p>Employee self-service homepage > Time and absences > [Add absences]</p>
+        <h3 class="govuk-heading-s">Correcting mistakes</h3>
+        <p>If you think your leave balance is incorrect, discuss this with your line manager. If it's necessary, they can ask SSCL to make changes.</p>
+        <h2 class="govuk-heading-m">Apply for leave</h2>
+        <p>Your leave isn't definite until you line manager has approved it. They have to balance your request against work needs and other people's leave requests. Give them enough advance notice to plan cover.</p>
+        <p>You can take a full day's leave or a half day (half your normal working hours).</p>
+        <p>Apply for all leave in the Employee Self-Service area of Metis.</p>
+        <a href="../fusion/leave/leave-type" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+            Start now
+            <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+            </svg>
+        </a>
+        <p>When your line manager has approved or rejected your leave, you'll get a notification in Metis and an email.</p>
+        <h2 class="govuk-heading-m">Change or cancel leave</h2>
+        <h3 class="govuk-heading-s">Change or cancel approved leave</h3>
+        <p>If your line manager has already approved your leave, you'll need to change or cancel your leave request and submit this for your line manager's approval.</p>
+        <p>Go to:<br />Employee self-service homepage > Time and absences > [Existing absences]</p>
+        <p>Open the existing leave request, edit it, then submit to your line manager.</p>
+        <a href="../fusion/leave/leave-type" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+            Start now
+            <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+            </svg>
+        </a>
+        <h3 class="govuk-heading-s">Change or cancel unapproved leave</h3>
+        <p>If your line manager hasn't yet approved your leave, you can change or cancel it in Metis yourself.</p>
+        <p>Go to:<br />Employee self-service homepage > Time and absences > [Existing absences]</p>
+        <h2 class="govuk-heading-m">Changing your situation</h2>
+        <p>Use the <a href="#" class="govuk-link">Pay and leave calculator</a> to help you understand how your annual leave may be affected if you:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>change your hours</li>
+            <li>change from pre-modernised to modernised terms</li>
+            <li>leave the department</li>
+        </ul>
         <nav class="app-pagination" role="navigation" aria-label="Pagination">
             <ul class="app-pagination__list">
-                <li class="app-pagination__item app-pagination__item--previous">
+                <!-- <li class="app-pagination__item app-pagination__item--previous">
                     <a href="#" class="govuk-link app-pagination__link" rel="prev">
                         <span class="app-pagination__link-title">
                             <svg class="app-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
@@ -111,7 +189,7 @@
                         <span class="app-pagination__link-divider visually-hidden">:</span>
                         <span class="app-pagination__link-label">Page 1 title</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="app-pagination__item app-pagination__item--next">
                     <a href="#" class="govuk-link app-pagination__link" rel="next">
                         <span class="app-pagination__link-title">
@@ -121,7 +199,7 @@
                             <span class="app-pagination__link-text">Next</span>
                         </span>
                         <span class="app-pagination__link-divider visually-hidden">:</span>
-                        <span class="app-pagination__link-label">Page 3 title</span>
+                        <span class="app-pagination__link-label">Bank holidays and privilege day</span>
                     </a>
                 </li>
             </ul>
