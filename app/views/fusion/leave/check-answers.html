@@ -88,16 +88,23 @@
         <dl class="govuk-summary-list">
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">Leave type</dt>
+                {% if data['leave-type'] %}
+                <dd class="govuk-summary-list__value">{{ data['leave-type'] }}</dd>
+                {% else %}
                 <dd class="govuk-summary-list__value">Annual</dd>
+                {% endif %}
                 <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">Change <span class="govuk-visually-hidden">leave type</span>
+                    <a class="govuk-link" href="leave-type">Change <span class="govuk-visually-hidden">leave type</span>
                     </a>
                 </dd>
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">Start date</dt>
-                <dd class="govuk-summary-list__value">{{ data['start-date'] }}</dd>
-                <!-- <dd class="govuk-summary-list__value">2 August 2022</dd> -->
+                {% if data['start-date'] %}
+                <dd class="govuk-summary-list__value">{{ data['start-date'] | govukDate }}</dd>
+                {% else %}
+                <dd class="govuk-summary-list__value">2 August 2022</dd> 
+                {% endif %}
                 <dd class="govuk-summary-list__actions">
                     <a class="govuk-link" href="#">Change <span class="govuk-visually-hidden">start date</span>
                     </a>
@@ -105,8 +112,11 @@
             </div>
             <div class="govuk-summary-list__row">
                 <dt class="govuk-summary-list__key">End date</dt>
-                <dd class="govuk-summary-list__value">{{ data['end-date'] }}</dd>
-                <!-- <dd class="govuk-summary-list__value">7 August 2022</dd> -->
+                {% if data['end-date'] %}
+                <dd class="govuk-summary-list__value">{{ data['end-date'] | govukDate }}</dd>
+                {% else %}
+                <dd class="govuk-summary-list__value">7 August 2022</dd>
+                {% endif %}
                 <dd class="govuk-summary-list__actions">
                     <a class="govuk-link" href="#">Change <span class="govuk-visually-hidden">end date</span>
                     </a>
