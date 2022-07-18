@@ -48,3 +48,11 @@ $govuk-font-family: inherit;
 .grey-text {
     color: #505a5f;
 }
+
+.border-hidden {
+    border: none !important;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #b1b4b6 !important;
+}

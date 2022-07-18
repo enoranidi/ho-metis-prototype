@@ -103,10 +103,10 @@
                 {% if data['start-date'] %}
                 <dd class="govuk-summary-list__value">{{ data['start-date'] | govukDate }}</dd>
                 {% else %}
-                <dd class="govuk-summary-list__value">1 August 2022</dd> 
+                <dd class="govuk-summary-list__value">Monday 1 August 2022</dd> 
                 {% endif %}
                 <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">Change <span class="govuk-visually-hidden">start date</span>
+                    <a class="govuk-link" href="annual-leave-dates">Change <span class="govuk-visually-hidden">start date</span>
                     </a>
                 </dd>
             </div>
@@ -115,10 +115,50 @@
                 {% if data['end-date'] %}
                 <dd class="govuk-summary-list__value">{{ data['end-date'] | govukDate }}</dd>
                 {% else %}
-                <dd class="govuk-summary-list__value">5 August 2022</dd>
+                <dd class="govuk-summary-list__value">Friday 5 August 2022</dd>
                 {% endif %}
                 <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">Change <span class="govuk-visually-hidden">end date</span>
+                    <a class="govuk-link" href="annual-leave-dates">Change <span class="govuk-visually-hidden">end date</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row border-hidden">
+                <dt class="govuk-summary-list__key">Full or half days</dt>
+                <dd class="govuk-summary-list__value border-bottom">Monday 1 August 20222 - Full day (7.4 hours)</dd>
+                <dd class="govuk-summary-list__actions border-bottom">
+                    <a class="govuk-link" href="annual-leave-hours">Change <span class="govuk-visually-hidden">full or half days</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row border-hidden">
+                <dt class="govuk-summary-list__key">&nbsp;</dt>
+                <dd class="govuk-summary-list__value border-bottom">Tuesday 2 August 20222 - Full day (7.4 hours)</dd>
+                <dd class="govuk-summary-list__actions border-bottom">
+                    <a class="govuk-link" href="annual-leave-hours">Change <span class="govuk-visually-hidden">full or half days</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row border-hidden">
+                <dt class="govuk-summary-list__key">&nbsp;</dt>
+                <dd class="govuk-summary-list__value border-bottom">Wednesday 3 August 20222 - Full day (7.4 hours)</dd>
+                <dd class="govuk-summary-list__actions border-bottom">
+                    <a class="govuk-link" href="annual-leave-hours">Change <span class="govuk-visually-hidden">full or half days</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row border-hidden">
+                <dt class="govuk-summary-list__key">&nbsp;</dt>
+                <dd class="govuk-summary-list__value border-bottom">Thursday 4 August 20222 - Full day (7.4 hours)</dd>
+                <dd class="govuk-summary-list__actions border-bottom">
+                    <a class="govuk-link" href="annual-leave-hours">Change <span class="govuk-visually-hidden">full or half days</span>
+                    </a>
+                </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+                <dt class="govuk-summary-list__key">&nbsp;</dt>
+                <dd class="govuk-summary-list__value border-bottom">Friday 5 August 20222 - Full day (7.4 hours)</dd>
+                <dd class="govuk-summary-list__actions border-bottom">
+                    <a class="govuk-link" href="annual-leave-hours">Change <span class="govuk-visually-hidden">full or half days</span>
                     </a>
                 </dd>
             </div>
@@ -126,8 +166,8 @@
                 <dt class="govuk-summary-list__key">Total leave</dt>
                 <dd class="govuk-summary-list__value">5 days (37 hours)</dd>
                 <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="#">Change <span class="govuk-visually-hidden">total leave</span>
-                    </a>
+                    <!-- <a class="govuk-link" href="#">Change <span class="govuk-visually-hidden">total leave</span>
+                    </a> --> &nbsp;
                 </dd>
             </div>
         </dl>
